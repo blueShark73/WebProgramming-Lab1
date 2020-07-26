@@ -1,0 +1,99 @@
+#content{
+    width: 50%;
+    margin: 0 auto;
+}
+
+header{
+    background: #222;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    margin: -10px -10px 10px -10px;
+    padding: 10px 20px;
+}
+
+#github{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#github a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#github a:hover{
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+#name{
+    float: right;
+    margin-right: 20px;
+}
+
+.axis-text{
+    font-family: "Harlow Solid Italic", Serif,serif;
+    font-size: 16px;
+}
+
+svg{
+    float: left;
+    margin: 10px;
+}
+
+.r-value-button{
+    background: white;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 5px;
+    width: 50px;
+    margin: 5px 10px;
+}
+
+.r-value-selected-button{
+    background: red;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 5px;
+    width: 50px;
+    margin: 5px 10px;
+}
+
+.element-of-form{
+    margin: 10px;
+}
+
+.control-button{
+    background: darkblue;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+}
+
+#data-form{
+    text-align: center;
+    float: right;
+}
+
+.radio-row{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.radio{
+    margin: 3px;
+}
+
+.inner-label{
+    width: 10px;
+    display: inline-block;
+}
+
+.buttons-line{
+    display: flex;
+    justify-content: center;
+}
