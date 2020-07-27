@@ -1,6 +1,9 @@
 #content{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #000;
+    border-radius: 5px;
 }
 
 header{
@@ -40,8 +43,8 @@ header{
 }
 
 .graphics{
-    float: left;
     margin: 10px;
+    flex: 1;
 }
 
 .r-value-button{
@@ -75,8 +78,8 @@ header{
 
 .data-form{
     text-align: center;
-    float: left;
     margin-left: 20px;
+    flex: 1;
 }
 
 .radio-row{
@@ -110,5 +113,40 @@ header{
 #error-log{
     background: rgba(255, 0, 0, 0.8);
     color: white;
-    font-size: 16px;
+    font-size: 18px;
 }
+
+.table{
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+.table-header{
+    background: #222222;
+    font-size: 20px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    color: white;
+    text-align: center;
+}
+
+.table-row{
+    background: blue;
+    display: flex;
+    color: white;
+    text-align: center;
+    height: 30px;
+    align-items: center;
+}
+
+.table-row div, .table-header div{
+    flex: 1;
+}
+
+.graphics-and-form{
+    display: flex;
+    align-items: center;
+}
+
+
