@@ -39,7 +39,7 @@ header{
     font-size: 16px;
 }
 
-svg{
+.graphics{
     float: left;
     margin: 10px;
 }
@@ -73,8 +73,10 @@ svg{
     font-size: 15px;
 }
 
-#data-form{
+.data-form{
     text-align: center;
+    float: left;
+    margin-left: 20px;
 }
 
 .radio-row{
@@ -97,4 +99,16 @@ svg{
 .buttons-line{
     display: flex;
     justify-content: center;
+}
+
+#y-value{
+    border: 3px solid blue;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+#error-log{
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    font-size: 16px;
 }

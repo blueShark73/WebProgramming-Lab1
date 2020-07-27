@@ -5,9 +5,7 @@ $(".r-value-button").click(function () {
         .toggleClass("r-value-button");
 });
 
-console.log("Hello");
+$("#y-value").keyup(checkYInput);
 
-$("#y-value").blur(function () {
-    console.log($(this).val());
-});
+$('button[name=\"submit\"]').on("click", onSubmitClick);
 
