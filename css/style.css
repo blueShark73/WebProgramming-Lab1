@@ -29,7 +29,7 @@ header{
     text-decoration: underline;
 }
 
-#name{
+#student-name{
     float: right;
     margin-right: 20px;
 }
@@ -54,7 +54,7 @@ svg{
 }
 
 .r-value-selected-button{
-    background: red;
+    background: hotpink;
     border: 2px solid red;
     border-radius: 4px;
     padding: 5px;
@@ -75,10 +75,11 @@ svg{
 
 #data-form{
     text-align: center;
-    float: right;
 }
 
 .radio-row{
+    width: 220px;
+    margin: 0 auto;
     display: flex;
     text-align: center;
     justify-content: space-around;

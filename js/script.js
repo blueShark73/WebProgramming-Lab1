@@ -5,3 +5,9 @@ $(".r-value-button").click(function () {
         .toggleClass("r-value-button");
 });
 
+console.log("Hello");
+
+$("#y-value").blur(function () {
+    console.log($(this).val());
+});
+
