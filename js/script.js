@@ -9,3 +9,7 @@ $("#y-value").keyup(checkYInput);
 
 $('button[name=\"submit\"]').on("click", onSubmitClick);
 
+$(".label").animate({
+    opacity: "+=1",
+    fontSize: "+=1.2em"
+}, 1500);

@@ -8,7 +8,7 @@
 <body>
 <header>
     <div id="github">
-        <a href="https://github.com/blueShark73">Github</a>
+        <a href="https://github.com/blueShark73/WebProgramming-Lab1">Github</a>
     </div>
     <div id="student-name">Dyakonov Mikhail P3211<br>Variant 2205</div>
 </header>
@@ -51,11 +51,15 @@
         <div class="data-form">
             <form id="data-form">
                 <div class="for-y element-of-form">
-                    <label for="y-value">Y value:</label><br>
-                    <input id="y-value" type="text" name="y-value" placeholder="value from -3 to 5">
+                    <div class="label">
+                        <label for="y-value">Y value:</label>
+                    </div>
+                    <div>
+                        <input id="y-value" type="text" name="y-value" placeholder="value from -3 to 5">
+                    </div>
                 </div>
                 <div class="for-x element-of-form">
-                    <div>
+                    <div class="label">
                         <label>X value:</label>
                     </div>
                     <div class="radio-row">
@@ -102,7 +106,7 @@
                     </div>
                 </div>
                 <div class="for-r element-of-form">
-                    <div>
+                    <div class="label">
                         <label>R value:</label>
                     </div>
                     <div class="buttons-line">
@@ -126,9 +130,14 @@
                     </div>
                 </div>
                 <div class="control-buttons element-of-form">
-                    <button class="control-button" type="button" name="submit">Submit</button>
-                    <button class="control-button" type="reset">Reset</button>
+                    <div>
+                        <button class="control-button" type="button" name="submit">Submit</button>
+                    </div>
+                    <div>
+                        <button class="control-button" type="reset">Reset</button>
+                    </div>
                 </div>
+
                 <div id="error-log"></div>
             </form>
         </div>
@@ -156,7 +165,8 @@
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="js/jquery.js"></script>
 <script src="js/validate.js"></script>
 <script src="js/script.js"></script>
 </body>
