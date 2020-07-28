@@ -1,3 +1,7 @@
+const X_INVALID_MESSAGE = "Select X value";
+const Y_INVALID_MESSAGE = "Fix Y value";
+const R_INVALID_MESSAGE = "Select R value";
+
 function checkYInput() {
     let yText = $("#y-value").val().replace(",", ".");
     let yVal = parseFloat(yText);
@@ -12,7 +16,7 @@ function checkYInput() {
 
 function checkY() {
     if(!checkYInput()){
-        writeErrorMessage("Fix Y value");
+        writeErrorMessage(Y_INVALID_MESSAGE);
         return false;
     }
     return true;
@@ -20,7 +24,7 @@ function checkY() {
 
 function checkX() {
     if($(".for-x input[type=\"radio\"]:checked").val() === undefined){
-        writeErrorMessage("Select X value");
+        writeErrorMessage(X_INVALID_MESSAGE);
         return false;
     }
     return true;
@@ -32,14 +36,10 @@ function writeErrorMessage(message) {
 
 function checkR() {
     if($(".r-value-selected-button").val() === undefined){
-        writeErrorMessage("Select R value");
+        writeErrorMessage(R_INVALID_MESSAGE);
         return false;
     }
     return true;
 }
 
-function onSubmitClick() {
-    if(checkX() && checkY() && checkR()){
-        writeErrorMessage("It's ok");
-    }
-}
+
