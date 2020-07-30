@@ -58,7 +58,7 @@
                         <label for="y-value">Y value:</label>
                     </div>
                     <div>
-                        <input id="y-value" type="text" name="y-value" placeholder="value from -3 to 5">
+                        <input id="y-value" type="text" name="y-value" placeholder="value from -3 to 5" maxlength="20">
                     </div>
                 </div>
                 <div class="for-x element-of-form">
@@ -133,14 +133,18 @@
                     </div>
                 </div>
                 <div class="control-buttons element-of-form">
-                    <div>
-                        <button class="control-button" type="button" name="submit">Submit</button>
+                    <div class="form-buttons">
+                        <div>
+                            <button class="control-button" type="button" name="submit">Submit</button>
+                        </div>
+                        <div>
+                            <button class="control-button" type="reset" name="reset">Reset</button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="control-button" type="reset" name="reset">Reset</button>
-                    </div>
-                    <div>
-                        <button class="control-button" type="button" name="clearTable">Clear Table</button>
+                    <div class="table-buttons">
+                        <div>
+                            <button class="control-button" type="button" name="clearTable">Clear table</button>
+                        </div>
                     </div>
                 </div>
                 <div id="error-log"></div>

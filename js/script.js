@@ -3,11 +3,12 @@ const CANVAS_HEIGHT = 400;
 const CANVAS_R_VALUE = 160;
 
 function onSubmitClick() {
+    let point = $("#point");
     if (checkX() && checkY() && checkR()) {
         writeErrorMessage("");
         const x = getXValue(), y = getYValue(), r = getRValue();
         const xCoordinate = calculateX(x, r), yCoordinate = calculateY(y, r);
-        $("#point").attr({
+        point.attr({
             cx: xCoordinate,
             cy: yCoordinate,
             visibility: "visible"
@@ -16,6 +17,11 @@ function onSubmitClick() {
         fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r)
             .then(response => response.text())
             .then(data => $(".table-content").html(data));
+    }
+    else {
+        point.attr({
+            visibility: "hidden"
+        })
     }
 }
 

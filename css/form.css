@@ -96,7 +96,7 @@
     color: white;
     font-size: 18px;
     width: 60%;
-    margin: 0 auto;
+    margin: 1% auto 1%;
 }
 
 .label{
@@ -115,11 +115,25 @@ input[type="radio"]:hover{
     box-shadow: 0 0 5px 5px green;
 }
 
-.control-buttons{
+.form-buttons{
     display: flex;
     justify-content: center;
 }
 
-.control-buttons > div{
+.control-buttons > div > div{
     margin: 0 3%;
 }
+
+.table-buttons{
+    padding: 2%;
+}
+
+button[name="clearTable"]{
+    padding: 3%;
+}
+
+.control-buttons{
+    margin-bottom: 0;
+}
+
+
