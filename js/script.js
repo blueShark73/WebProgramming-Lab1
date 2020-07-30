@@ -12,7 +12,17 @@ function onSubmitClick() {
             cy: yCoordinate,
             visibility: "visible"
         });
+
+        fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r)
+            .then(response => response.text())
+            .then(data => $(".table-content").html(data));
     }
+}
+
+function onClearTableClick() {
+    fetch("php/clear_table.php")
+        .then(response => response.text())
+        .then(data => $(".table-content").html(data));
 }
 
 function getXValue() {
@@ -48,6 +58,14 @@ $(".r-value-button").click(function () {
 $("#y-value").keyup(checkYInput);
 
 $('button[name=\"submit\"]').on("click", onSubmitClick);
+
+$('button[name=\"clearTable\"]').click(onClearTableClick);
+
+$("button.control-button[name = \"reset\"]").click(function () {
+    $(".r-value-selected-button")
+        .toggleClass("r-value-selected-button")
+        .toggleClass("r-value-button");
+});
 
 $(".label").animate({
     opacity: "+=1",
