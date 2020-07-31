@@ -17,8 +17,7 @@ function onSubmitClick() {
         fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r)
             .then(response => response.text())
             .then(data => $(".table-content").html(data));
-    }
-    else {
+    } else {
         point.attr({
             visibility: "hidden"
         })
@@ -71,6 +70,10 @@ $("button.control-button[name = \"reset\"]").click(function () {
     $(".r-value-selected-button")
         .toggleClass("r-value-selected-button")
         .toggleClass("r-value-button");
+});
+
+$(".table-header").click(function () {
+    $(".table-content").slideToggle("slow");
 });
 
 $(".label").animate({

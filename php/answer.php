@@ -25,24 +25,26 @@ function getResult($x, $y, $r)
     }
 
     // 2 quarter
-    if ($x <= 0 && $y >= 0 && $x * $x + $y * $y <= $r * $r/4) {
+    if ($x <= 0 && $y >= 0 && $x * $x + $y * $y <= $r * $r / 4) {
         return true;
     }
 
     // 4 quarter
-    if ($x >= 0 && $y <= 0 && $x <= $r && $y >= -$r/2){
+    if ($x >= 0 && $y <= 0 && $x <= $r && $y >= -$r / 2) {
         return true;
     }
 
     return false;
 }
 
-function resultDiv($result){
+function resultDiv($result)
+{
     return $result ? "<div style=\"color: green\">True</div>" : "<div style=\"color: red\">False</div>";
 }
 
-function pushInHistory($data){
-    if(!isset($_SESSION['history'])) {
+function pushInHistory($data)
+{
+    if (!isset($_SESSION['history'])) {
         $_SESSION['history'] = array();
     }
     array_push($_SESSION['history'], $data);
@@ -59,7 +61,7 @@ if (!checkData($xValue, $yValue, $rValue)) {
     http_response_code(400);
 }
 $result = resultDiv(getResult($xValue, $yValue, $rValue));
-$executionTime = round(microtime(true) - $startTime, 12)*1000000;
+$executionTime = round(microtime(true) - $startTime, 12) * 1000000;
 $currentTime = date("H:i:s");
 $data = array(
     "x" => $xValue,
@@ -71,7 +73,7 @@ $data = array(
 );
 pushInHistory($data);
 
-foreach ($_SESSION['history'] as $row){
+foreach ($_SESSION['history'] as $row) {
     echo "<div class=\"table-row\">
                 <div>$row[x]</div>
                 <div>$row[y]</div>

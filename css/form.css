@@ -1,4 +1,4 @@
-.r-value-button{
+.r-value-button {
     display: inline-block;
     background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 50%, #9EEFE1 100%);
     background-size: 200% auto;
@@ -9,12 +9,12 @@
     font-weight: bold;
 }
 
-.r-value-button:hover{
+.r-value-button:hover {
     box-shadow: 0 0 10px 7px green;
     background-position: right center;
 }
 
-.r-value-selected-button{
+.r-value-selected-button {
     background: hotpink;
     border: 2px solid green;
     border-radius: 4px;
@@ -25,11 +25,11 @@
     box-shadow: 0 0 10px 7px green;
 }
 
-.element-of-form{
+.element-of-form {
     margin: 3%;
 }
 
-.control-button{
+.control-button {
     background: #00008b;
     color: white;
     padding: 10%;
@@ -40,12 +40,12 @@
     transition: .5s;
 }
 
-.control-button:hover{
+.control-button:hover {
     box-shadow: 0 0 8px 8px green;
     background-color: rgba(0, 0, 139, 0.7);
 }
 
-.data-form{
+.data-form {
     text-align: center;
     flex: 1;
     background: mediumaquamarine;
@@ -53,7 +53,7 @@
     border-radius: 14px;
 }
 
-.radio-row{
+.radio-row {
     width: 60%;
     margin: 0 auto;
     display: flex;
@@ -61,11 +61,11 @@
     justify-content: space-around;
 }
 
-.radio{
+.radio {
     margin: 1%;
 }
 
-.inner-label{
+.inner-label {
     width: 10px;
     display: inline-block;
     font-weight: bold;
@@ -73,12 +73,12 @@
     margin: 2px;
 }
 
-.buttons-line{
+.buttons-line {
     display: flex;
     justify-content: center;
 }
 
-#y-value{
+#y-value {
     border: 4px solid blue;
     border-radius: 4px;
     padding: 4px;
@@ -87,11 +87,11 @@
     width: 45%;
 }
 
-#y-value:hover{
+#y-value:hover {
     box-shadow: 0 0 5px 5px green;
 }
 
-#error-log{
+#error-log {
     background: rgba(255, 0, 0, 0.8);
     color: white;
     font-size: 18px;
@@ -99,7 +99,7 @@
     margin: 1% auto 1%;
 }
 
-.label{
+.label {
     font-style: italic;
     font-size: 0;
     font-weight: bold;
@@ -111,28 +111,28 @@
     opacity: 0;
 }
 
-input[type="radio"]:hover{
+input[type="radio"]:hover {
     box-shadow: 0 0 5px 5px green;
 }
 
-.form-buttons{
+.form-buttons {
     display: flex;
     justify-content: center;
 }
 
-.control-buttons > div > div{
+.control-buttons > div > div {
     margin: 0 3%;
 }
 
-.table-buttons{
+.table-buttons {
     padding: 2%;
 }
 
-button[name="clearTable"]{
+button[name="clearTable"] {
     padding: 3%;
 }
 
-.control-buttons{
+.control-buttons {
     margin-bottom: 0;
 }
 
