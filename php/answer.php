@@ -13,6 +13,10 @@ function checkData($x, $y, $r)
     return false;
 }
 
+function checkParams(){
+    return isset($_GET["x"]) && isset($_GET["y"]) && isset($_GET["r"]);
+}
+
 function getResult($x, $y, $r)
 {
     //   2 | 1
@@ -54,11 +58,16 @@ function pushInHistory($data)
 session_start();
 date_default_timezone_set('Europe/Moscow');
 $startTime = microtime(true);
+if(!checkParams()){
+    http_response_code(400);
+    exit();
+}
 $xValue = (double)$_GET["x"];
 $yValue = (double)$_GET["y"];
 $rValue = (double)$_GET["r"];
 if (!checkData($xValue, $yValue, $rValue)) {
     http_response_code(400);
+    exit();
 }
 $result = resultDiv(getResult($xValue, $yValue, $rValue));
 $executionTime = round(microtime(true) - $startTime, 12) * 1000000;

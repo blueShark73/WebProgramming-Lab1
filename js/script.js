@@ -14,6 +14,16 @@ function onSubmitClick() {
             visibility: "visible"
         });
 
+        /*
+        $.ajax({
+            url: "php/answer.php?x=" + x + "&y=" + y + "&r=" + r,
+            type: 'GET',
+            success: function (response) {
+                $(".table-content").html(response);
+            }
+        });
+         */
+
         fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r)
             .then(response => response.text())
             .then(data => $(".table-content").html(data));
