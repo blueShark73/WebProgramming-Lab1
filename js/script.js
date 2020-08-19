@@ -26,7 +26,8 @@ function onSubmitClick() {
 
         fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r)
             .then(response => response.text())
-            .then(data => $(".table-content").html(data));
+            .then(data => $(".table-content").html(data))
+            .catch(err => writeErrorMessage('HTTP error. Try later...'));
     } else {
         point.attr({
             visibility: "hidden"

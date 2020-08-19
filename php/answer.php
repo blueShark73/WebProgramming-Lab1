@@ -1,7 +1,6 @@
 <?php
 
-function checkData($x, $y, $r)
-{
+function checkData($x, $y, $r){
     $X_VALUES = array(-5, -4, -3, -2, -1, 0, 1, 2, 3);
     $R_VALUES = array(1, 1.5, 2, 2.5, 3);
     $Y_MAX_VALUE = 5;
