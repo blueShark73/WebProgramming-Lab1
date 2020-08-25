@@ -59,8 +59,8 @@ header{
     }
 }
 
-@media (max-width: 630px) {
-    #content{
-        width: 100%;
+@media (max-width: 670px) {
+    #content {
+        width: auto;
     }
 }

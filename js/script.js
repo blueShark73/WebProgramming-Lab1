@@ -91,3 +91,4 @@ $(".label").animate({
     opacity: "+=1",
     fontSize: "+=1.2em"
 }, 1500);
+

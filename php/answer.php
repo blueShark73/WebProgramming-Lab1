@@ -53,20 +53,24 @@ function pushInHistory($data)
     array_push($_SESSION['history'], $data);
 }
 
+// Ne lomaite laby
+function sendErrorStatus(){
+    http_response_code(400);
+    exit();
+}
+
 
 session_start();
 date_default_timezone_set('Europe/Moscow');
 $startTime = microtime(true);
 if(!checkParams()){
-    http_response_code(400);
-    exit();
+    sendErrorStatus();
 }
 $xValue = (double)$_GET["x"];
 $yValue = (double)$_GET["y"];
 $rValue = (double)$_GET["r"];
 if (!checkData($xValue, $yValue, $rValue)) {
-    http_response_code(400);
-    exit();
+    sendErrorStatus();
 }
 $result = resultDiv(getResult($xValue, $yValue, $rValue));
 $executionTime = round(microtime(true) - $startTime, 12) * 1000000;
