@@ -92,3 +92,11 @@ $(".label").animate({
     fontSize: "+=1.2em"
 }, 1500);
 
+// handler enter key
+$("#data-form").keydown(function (event){
+    // enter key code = 13
+    if(event.keyCode === 13){
+        event.preventDefault();
+        $('button[name=\"submit\"]').click();
+    }
+});
