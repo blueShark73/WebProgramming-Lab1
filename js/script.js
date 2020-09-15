@@ -2,7 +2,7 @@ const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 400;
 const CANVAS_R_VALUE = 160;
 
-function onSubmitClick() {
+async function onSubmitClick() {
     let point = $("#point");
     if (checkX() && checkY() && checkR()) {
         writeErrorMessage("");
@@ -23,6 +23,14 @@ function onSubmitClick() {
             }
         });
          */
+
+       /* try {
+            const response = await fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r);
+            const data = response.text();
+            $(".table-content").html(data);
+        } catch (err) {
+            writeErrorMessage('HTTP error. Try later...');
+        }*/
 
         fetch("php/answer.php?x=" + x + "&y=" + y + "&r=" + r)
             .then(response => response.text())

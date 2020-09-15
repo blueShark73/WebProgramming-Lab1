@@ -73,6 +73,7 @@ if (!checkData($xValue, $yValue, $rValue)) {
     sendErrorStatus();
 }
 $result = resultDiv(getResult($xValue, $yValue, $rValue));
+// in microseconds
 $executionTime = round(microtime(true) - $startTime, 12) * 1000000;
 $currentTime = date("H:i:s");
 $data = array(
